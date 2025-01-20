@@ -1,6 +1,6 @@
 # .replit file for running the Fortnite Lobby Bot on Replit
 
-# Specify the language and version
+# Specify  language and version
 language = "python3"
 
 # Command to run the main script
