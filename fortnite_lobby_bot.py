@@ -1,6 +1,6 @@
 import fortnitepy
 import asyncio
-import json
+import os
 import logging
 
 # Configure logging
@@ -32,17 +32,12 @@ class FortniteLobbyBot:
         # Example of equipping an item
         await self.equip_item('CID_001_Athena_Commando_F_Default')
 
-def load_config():
-    with open('config.json', 'r') as config_file:
-        return json.load(config_file)
-
 def main():
-    config = load_config()
-    email = config.get('email')
-    password = config.get('password')
+    email = os.getenv('EMAIL')
+    password = os.getenv('PASSWORD')
 
     if not email or not password:
-        logger.error("Email and password must be provided in config.json")
+        logger.error("Email and password must be set as environment variables")
         return
 
     bot = FortniteLobbyBot(email, password)

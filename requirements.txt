@@ -1,1 +1,3 @@
-fortnitepy==1.0.0  # Example version, replace with the actual version used
+fortnitepy==1.2.0  # Updated to the latest compatible version
+# Add any additional dependencies below
+# Example: requests==2.25.1
